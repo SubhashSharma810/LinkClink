@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LinkClink.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LinkClink"
+    xmlns:Views="clr-namespace:LinkClink.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="LinkClink">
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="🌙"
+                     Clicked="OnThemeToggleClicked"
+                     Order="Primary"
+                     Priority="0"/>
+    </Shell.ToolbarItems>
+
+    <TabBar>
+        <ShellContent Title="LinlClink"
+                      ContentTemplate="{DataTemplate Views:LinkClinkPage}" />
+
+        <ShellContent Title="TGSearch"
+                      ContentTemplate="{DataTemplate Views:TGSearchPage}" />
+    </TabBar>
+
+</Shell>

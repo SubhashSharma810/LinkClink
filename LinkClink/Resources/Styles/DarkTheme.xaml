@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LinkClink.Resources.Styles.DarkTheme">
+
+    <!-- Background Color -->
+    <Color x:Key="BackgroundColor">#1e1e1e</Color>
+    <Color x:Key="TextColor">#ffffff</Color>
+    <Color x:Key="EntryBackground">#282828</Color>
+    <Color x:Key="FrameColor">#e1e1e1</Color>
+    <Color x:Key="PlaceholderColor">#888888</Color>
+    <Color x:Key="InputBorderColor">#444444</Color>
+
+    <!-- Common -->
+    <Color x:Key="PickerTextColor">#ffffff</Color>
+    <!-- Dark: #ffffff -->
+    <Color x:Key="PickerBackground">#1e1e1e</Color>
+    <!-- Dark: #1E1E1E -->
+
+
+
+    <!-- Gradient Button-->
+    <LinearGradientBrush x:Key="PrimaryGradient" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#6a11cb"/>
+        <GradientStop Color="#2575fc"/>
+    </LinearGradientBrush>
+    
+    
+
+
+</ResourceDictionary>

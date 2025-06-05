@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="LinkClink.Views.LinkClinkPage"  
+             Title="LinkClink"  
+             BackgroundColor="{DynamicResource BackgroundColor}">  
+
+    <ScrollView>  
+        <VerticalStackLayout Padding="12" Spacing="20">  
+            <!-- Title -->  
+            <Frame Padding="12"  
+                   BackgroundColor="Transparent"  
+                   HasShadow="False">  
+                <Label Text="LinkClink"  
+                       FontSize="20"  
+                       FontAttributes="Bold"   
+                       TextColor="{DynamicResource TextColor}"/>  
+            </Frame>  
+            <!-- Input Text Field -->
+            <Frame BackgroundColor="{DynamicResource FrameColor}"   
+                    CornerRadius="12"  
+                    Padding="0"
+                    BorderColor="{DynamicResource InputBorderColor}"
+                    HasShadow="False"
+                   >
+                <VerticalStackLayout>
+                    <Entry x:Name="LinkEntry" 
+                        Placeholder="Past Link here"  
+                            BackgroundColor="Transparent"  
+                            TextColor="{DynamicResource TextColor}"
+                            PlaceholderColor="{DynamicResource PlaceholderColor}"
+                            HeightRequest="60"
+                           />
+                    <BoxView
+                        HeightRequest="2.5"
+                        HorizontalOptions="Fill"
+                        Margin="0,0"
+                        Background="{DynamicResource PrimaryGradient}"
+                        />
+                </VerticalStackLayout>
+            </Frame>
+            <!-- Preview Button -->
+            <Frame Padding="0" 
+                   CornerRadius="30"
+                   HasShadow="True"
+                   >
+                <Button Text="Preview"
+                        x:Name="PreviewButton"
+                        TextColor="{DynamicResource TextColor}"
+                        FontAttributes="Bold"
+                        CornerRadius="30"
+                        Background="{DynamicResource PrimaryGradient}"
+                        Clicked="OnPreviewClicked"/>
+            </Frame>
+
+            <Image x:Name="ThumbnailImage" HeightRequest="180" Aspect="AspectFill" />
+            <Label x:Name="VideoTitleLabel" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+
+            <!-- Dropdown -->
+            <!-- Styled Picker with Bottom Border -->
+            <VerticalStackLayout Spacing="0" Padding="0" Margin="0,10,0,10">
+                <Picker x:Name="FormatPicker"
+                        Title="Select Quality"
+                        TitleColor="{DynamicResource PickerTextColor}"
+                        TextColor="{DynamicResource PickerTextColor}"
+                        BackgroundColor="{DynamicResource PickerBackground}"
+                        Margin="10,0"
+                        FontSize="16">
+
+                    <Picker.Items>
+                    <x:String>MP4</x:String>
+                    <x:String>WEBM</x:String>
+                </Picker.Items>
+                </Picker>
+                    
+                <!-- Bottom Border using same gradient as Preview Button -->
+                <BoxView
+                        HeightRequest="2"
+                        HorizontalOptions="Fill"
+                        Margin="10,0"
+                        Background="{DynamicResource PrimaryGradient}" />
+            </VerticalStackLayout>
+
+            <!-- Download Button -->
+            <Frame Padding="0"
+                   CornerRadius="30"
+                   HasShadow="True">
+                <Button Text="Download"
+                        x:Name="DownloadButton"
+                        TextColor="{DynamicResource TextColor}"
+                        FontAttributes="Bold"
+                        CornerRadius="30"
+                        Background="{DynamicResource PrimaryGradient}"
+                        Clicked="OnDownloadClicked"/>
+            </Frame>
+
+
+        </VerticalStackLayout>  
+    </ScrollView>  
+</ContentPage>
